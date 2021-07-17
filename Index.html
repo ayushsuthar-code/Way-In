@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+    <title>Way-In</title>
+  <head>
+      
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+      <script type="text/javascript" src="bootstrap/jquery-3.6.0.min.js"></script>
+		
+		<script src="jquery-ui/jquery-ui.js"></script>
+		
+       <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+  
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+	
+	  .jumbotron{
+	  
+	   background-image: url(workout4.jpg); 
+          text-align: center;
+	   } 
+        
+       
+        
+        .space{
+            margin-bottom: 20px;
+            
+        }
+      
+        #Summary{
+            
+            text-align: center;
+            font-style: Impact;
+            
+        }
+        .container{
+            
+             margin-top: 50px;
+            text-align: center;
+        }
+        
+        .sidepanel {
+  height: 250px; /* Specify a height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden;/* Disable horizontal scroll */
+  overflow-y: hidden;            
+  padding-top: 50px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
+}
+
+/* The sidepanel links */
+.sidepanel a {
+  padding: 3px 8px 3px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidepanel a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidepanel .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 23px;
+  margin-left: 40px;
+}
+
+/* Style the button that is used to open the sidepanel */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+        
+        .fcolor{
+            
+            color: white;
+        }        
+        
+        .bcolor{
+            
+            background-color: black;
+            border-color: black;
+        }
+        
+        .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+ 
+  color: blue;
+}
+
+.fa-twitter {
+  
+  color: skyblue;
+}
+
+        .fa-google{
+            color: dodgerblue;
+        }
+
+
+.fa-youtube {
+  
+  color: crimson;
+}
+
+.fa-instagram {
+  COLOR: white;
+        }
+  .fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+        .footer{
+            
+            background-color: #4c4646;
+            
+        }
+        .display-4{
+            
+            color: black;
+            font-style: bold;
+        }
+        
+        .imagetext{
+            
+            font-size: 25px;
+        }
+        
+        #container{
+            
+            
+        }
+        
+	   </style>
+   
+  </head>
+  <body>
+    
+       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <div id="mySidepanel" class="sidepanel">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+        <hr class="dropdown-divider fcolor">
+  <a href="#">Services</a>
+        <hr class="dropdown-divider fcolor">
+  <a href="#">Clients</a>
+        <hr class="dropdown-divider fcolor">
+  <a href="#">Contact</a>
+</div>
+
+<button class="openbtn" onclick="openNav()">Way-In</button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active fcolor" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link fcolor" href="#">Categories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle fcolor" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Deit Plan
+          </a>
+          <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item fcolor" href="#">Vegetarien</a></li>
+            <li><a class="dropdown-item fcolor" href="#">Non-Vegetarien</a></li>
+            <li><hr class="dropdown-divider fcolor"></li>
+            <li><a class="dropdown-item fcolor" href="#">Water Intake</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2 bcolor" type="email" placeholder="Email" aria-label="email">
+		 <input class="form-control me-2 bcolor" type="password" placeholder="Password" aria-label="Password">
+        <button class="btn btn-outline-success" type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</nav>
+      
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="workout.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       
+        <p class="imagetext">IN THE GYM SOME BURN THE CALORIES AND SOME BURN THE MEMORIES.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="workout5.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>WHAT ARE YOU WAITING FOR?</h5>
+        <p class="imagetext">Be proud but never satisfied.Success is the best form of revenge</p>
+          
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="workout7.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        
+        <p class="imagetext">Do something today that your future self will thank you for.</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="jumbotron jumbotron-fluid">
+  <h1 class="display-4">Take control of your goals. Track calories, break down ingredients, and log activities with MyFitnessPal.</h1>
+  
+   <hr class="my-4">
+  <a class="btn btn-primary btn-lg space" href="#" role="button">Get your workout plan here.</a>
+</div>
+      
+      <div class="container">
+           <div class="row" id="Summary">
+          
+               <h1>The Tools for Your Goals</h1>
+          <h6>Trying to lose weight, tone up, lower your BMI, or invest in your overall health? We give you the right features to hit your goals.</h6>
+          </div>
+      
+  <div class="row">
+  <div class="col">
+    <div class="card">
+      <img src="image.jpg" class="card-img-top" alt="...">
+      <div class="card-bodys">
+        <h5 class="card-title">Learn. Track. Improve.</h5>
+        <p class="card-text">Keeping a food diary helps you understand your habits and increases your likelihood of hitting your goals.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="image1.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Logging Simplified</h5>
+        <p class="card-text">Scan barcodes, save meals and recipes, and use Quick Tools for fast and easy food tracking.</p>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card">
+      <img src="image2.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Stay Motivated</h5>
+        <p class="card-text">Join the World’s Largest Fitness Community for advice, tips, and support 24/7.</p>
+      </div>
+    </div>
+  </div>
+      <hr class="my-4">
+          </div>
+          <div class="footer" id="container">
+              <h2>Find us on here</h2>
+          <a href="#" class="fa fa-facebook"></a>
+<a href="#" class="fa fa-twitter"></a>
+<a href="#" class="fa fa-google"></a>
+
+<a href="#" class="fa fa-youtube"></a>
+<a href="#" class="fa fa-instagram"></a>
+
+          </div>
+          </div>
+        
+
+
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+      <script type="text/javascript">
+          
+          function openNav() {
+  document.getElementById("mySidepanel").style.width = "250px";
+}
+
+
+function closeNav() {
+  document.getElementById("mySidepanel").style.width = "0";
+}
+      </script>
+  </body>
+</html>
